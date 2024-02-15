@@ -3,15 +3,16 @@ using UnityEngine;
 public class MapManager : MonoBehaviour
 {
     // 장소 생성
-    public string GetPlaceName(string background, string genre)
+    public string GetPlaceName(string background, string genre, int i)
     {
         string map_setting = "너는 플레이어가 탐색할 수 있는 장소를 한 단어로 출력해야 해.";
         string query = background + " 배경의 " + genre + "분위기에 어울리는 장소명 1개를 출력해줘";
 
         string[] messages = { map_setting, query };
-        string place = CallGPT(messages, false);
+        string[] place = new string[5];
+        = CallGPT(messages, false);
 
-        return place; //배열로 바꿔야 되나
+        return place[i];
     }
 
     // 아이템 생성
