@@ -5,11 +5,12 @@ public class Items
     {
         Recover,
         Mob,
-        Weapon
+        Weapon,
+        Report
     }
     public static Type? RandomItemType()
     {
-        // enum의 모든 값 가져오기 : Recover, Mob, Weapon
+        // enum의 모든 값 가져오기 : Recover, Mob, Weapon, Report
         Array values = Enum.GetValues(typeof(Type));
 
         // 랜덤 인덱스 생성
@@ -28,6 +29,6 @@ public class Items
     public static void Main(string[] args)
     {
         // 랜덤으로 선택된 enum 값 또는 null 출력
-        Console.WriteLine("랜덤으로 선택 아이템 타입 or (null): " + RandomItemType());
+        Console.WriteLine("아이템 타입 or (null): " + RandomItemType());
     }
 }

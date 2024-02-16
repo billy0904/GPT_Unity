@@ -22,7 +22,7 @@ public class MapManager : MonoBehaviour
     // 0번 인덱스 == PNPC 장소 : 인트로에서 호출
     public void CreateMap()
     {
-        PNPCPlace = CallGPT();
+        string PNPCPlace = CallGPT();
         map[0] = PNPCPlace;
         i++;
     }
@@ -53,7 +53,7 @@ return map[i];
     }
 
 // 아이템 생성
-public string GetItemName(string town, string place) //recover, weapon, mob, null
+public string GetItemName(string town, string place) //recover, weapon, mob, report, null
 {
     string item_setting = place + "에 어울려는 아이템 네 가지 중 한 카테고리에 맞게 한 단어로 출력해야 해.";
     string query = place + "에 위치한 아이템 1개를 출력해줘.";
