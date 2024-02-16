@@ -1,0 +1,15 @@
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.csproj.AssemblyReference.cache
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.AssemblyInfoInputs.cache
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.AssemblyInfo.cs
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.csproj.CoreCompileInputs.cache
+C:\dev\EWHA\3_winter\GPT_Unity\bin\Debug\net6.0\GPT_Unity.exe
+C:\dev\EWHA\3_winter\GPT_Unity\bin\Debug\net6.0\GPT_Unity.deps.json
+C:\dev\EWHA\3_winter\GPT_Unity\bin\Debug\net6.0\GPT_Unity.runtimeconfig.json
+C:\dev\EWHA\3_winter\GPT_Unity\bin\Debug\net6.0\GPT_Unity.dll
+C:\dev\EWHA\3_winter\GPT_Unity\bin\Debug\net6.0\GPT_Unity.pdb
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.dll
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\refint\GPT_Unity.dll
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.pdb
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\GPT_Unity.genruntimeconfig.cache
+C:\dev\EWHA\3_winter\GPT_Unity\obj\Debug\net6.0\ref\GPT_Unity.dll
