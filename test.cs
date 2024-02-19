@@ -7,7 +7,7 @@ using Items;
 
 public class MapManager : MonoBehaviour
 {
-    public string[] map = new string[13];
+    public string[] map = new string[15]; //배열 크기 수정하기 
     string newPlace;
     int i = 0;
 
@@ -36,7 +36,7 @@ public class MapManager : MonoBehaviour
             for (int cnt = 1; cnt < 4; cnt++;)
         {
                 map[i] = "Chapter" + ch + " : 장소" + i; //CallGPT(); //해당 칸에 gpt 호출 값 저장
-                i++;
+                i++; //장소생성 함수 파서 밖으로 빼기 
             }
         }
     }
@@ -55,7 +55,7 @@ return map[i];
 // 아이템 생성
 public string GetItemName(string town, string place) //recover, weapon, mob, report, null
 {
-    string item_setting = place + "에 어울려는 아이템 네 가지 중 한 카테고리에 맞게 한 단어로 출력해야 해.";
+    string item_setting = place + "에 어울려는 아이템명을 한 단어로 출력해야해.";
     string query = place + "에 위치한 아이템 1개를 출력해줘.";
 
     string[] messages = { item_setting, query };
