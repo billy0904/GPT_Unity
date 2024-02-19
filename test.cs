@@ -22,7 +22,7 @@ public class MapManager : MonoBehaviour
     // 0번 인덱스 == PNPC 장소 : 인트로에서 호출
     public void CreateMap()
     {
-        string PNPCPlace = CallGPT();
+        string PNPCPlace = CallGPT(); // API 연결 함수 작성 
         map[0] = PNPCPlace;
         i++;
     }
