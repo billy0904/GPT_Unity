@@ -11,13 +11,16 @@ public class Eventrandom
     public static void Main(string[] args)
     {
         int place_idx = 1;
-        //int billy = 0;
+        int billy = 0;
+        Random random = new Random();
         while (place_idx < 13)
         {
             //목표 or 일반 이벤트 여부 정하기
-            Random random = new Random();
-            //billy = random.Next(3);
-            map[place_idx].event_type = random.Next(2);
+            billy = random.Next(3);
+            if (billy == 0)
+                map[place_idx].event_type = 1;
+            else
+                map[place_idx].event_type = 0;
             if (map[place_idx].event_type == 1) //100
             {
                 map[place_idx + 1].event_type = 0;
