@@ -1,9 +1,70 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Eventrandom
 {
+    public enum ItemType
+    {
+        Recover,
+        Mob,
+        Weapon
+    }
+    public enum GoalType
+    {
+        Item,
+        Report,
+        Monster
+    }
+    public static void ChooseItemType()
+    {
+        int i = 1;
+        Random random = new Random();
+        while (i < 13)
+        {
+            if (map[i].event_type == 0) //일반 이벤트일 경우
+            {
+                //enum의 모든 값 리스트로 가져오기 : Recover, Mob, Weapon
+                List<string> values = new List<string>(Enum.GetNames(typeof(ItemType)));
+                //null 항목 4개 추가
+                for (int idx = 0; idx < 4; idx++)
+                    values.Add("NULL");
+                //돌려돌려돌림판
+                int randomIdx = random.Next(values.Count);
+
+                map[i].item_type = values[randomIdx];
+            }
+            else //목표 이벤트일 경우
+            {
+                //enum의 모든 값 리스트로 가져오기 : Item, Report, Monster
+                List<string> values = new List<string>(Enum.GetNames(typeof(GoalType)));
+                //돌려돌려돌림판
+                int randomIdx = random.Next(values.Count);
+
+                map[i].item_type = values[randomIdx];
+            }
+            i++;
+        }
+    }
+
+    public static void IsANPCexists()
+    {
+        Random random = new Random();
+        int i = 1;
+        while (i < 13)
+        {
+            if (map[i].event_type == 1)
+                map[i].ANPC_exist = 0;
+            else
+            {
+                map[i].ANPC_exist = random.Next(2);
+            }
+            i++;
+        }
+    }
     public struct place
     {
+        public string item_type;
         public int ANPC_exist;
         public int event_type; //목표 이벤트 == 0, 일반 이벤트 == 이외 1, 2;
     }
@@ -48,10 +109,12 @@ public class Eventrandom
             map[place_idx].event_type = 1;
             map[place_idx].ANPC_exist = 0;
         }
+        IsANPCexists();
+        ChooseItemType();
         int i = 0;
         while (i < 14)
         {
-            Console.WriteLine("place" + i + ":" + map[i].event_type);
+            Console.WriteLine("place" + i + ":" + map[i].event_type + " / " + map[i].ANPC_exist + " / " + map[i].item_type);
             i++;
         }
     }
