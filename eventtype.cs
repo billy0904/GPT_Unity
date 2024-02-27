@@ -114,7 +114,7 @@ public class Eventrandom
         int i = 0;
         while (i < 14)
         {
-            Console.WriteLine("place" + i + ":" + map[i].event_type + " / " + map[i].ANPC_exist + " / " + map[i].item_type);
+            Console.WriteLine("place" + i + "- " + "이벤트타입: " + map[i].event_type + " ANPC등장여부: " + map[i].ANPC_exist + " 아이템타입: " + map[i].item_type);
             i++;
         }
     }
