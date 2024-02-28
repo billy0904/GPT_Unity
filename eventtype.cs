@@ -47,6 +47,20 @@ public class Eventrandom
         }
     }
 
+    public static void ItemStat()
+    {
+        Random random = new Random();
+        int i = 1;
+        while (i < 13)
+        {
+            if (map[i].item_type != "NULL")
+            {
+                map[i].item_stat = random.Next(1, 6);
+            }
+            i++;
+        }
+    }
+
     public static void IsANPCexists()
     {
         Random random = new Random();
@@ -67,6 +81,7 @@ public class Eventrandom
         public string item_type;
         public int ANPC_exist;
         public int event_type; //목표 이벤트 == 0, 일반 이벤트 == 이외 1, 2;
+        public int item_stat;
     }
     public static place[] map = new place[14];
     public static void Main(string[] args)
@@ -111,10 +126,11 @@ public class Eventrandom
         }
         IsANPCexists();
         ChooseItemType();
+        ItemStat();
         int i = 0;
         while (i < 14)
         {
-            Console.WriteLine("place" + i + "- " + "이벤트타입: " + map[i].event_type + " ANPC등장여부: " + map[i].ANPC_exist + " 아이템타입: " + map[i].item_type);
+            Console.WriteLine("place" + i + "- " + "이벤트타입: " + map[i].event_type + " ANPC등장여부: " + map[i].ANPC_exist + " 아이템타입: " + map[i].item_type + "/" + map[i].item_stat);
             i++;
         }
     }
