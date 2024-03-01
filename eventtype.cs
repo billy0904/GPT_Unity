@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Eventrandom
 {
+    //외부 파일 enum 연결
     public enum ItemType
     {
         Recover,
